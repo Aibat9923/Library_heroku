@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Give Feedback</h1>
+    <p>Rate the instructor from 1-5; where 1 is very bad, 5 is very good</p>
+
+
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Sent</button>
+    </form>
+{% endblock %}
